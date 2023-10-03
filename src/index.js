@@ -20,7 +20,6 @@ function beerDisplay(beer) {
     };
 
     // Display the name, image and description of beers
-
     beerName.textContent = beer.name,
         beerImage.src = beer.image_url,
         beerDescription.textContent = beer.description,
@@ -49,7 +48,6 @@ function beerDisplay(beer) {
 
         // Check if the review input element filled
         if (beerReviewText.value !== '') {
-
             beer.reviews.push(beerReviewText.value)
             updateBeer(beer)
         } else {
@@ -73,10 +71,9 @@ function updateBeer(beer) {
 
 };
 
-// function to fetch data from a server using fetch API and return a promise object
+// function to fetch data from json server using fetch API and return a promise object
 function fetchData(beer = null) {
     let baseURL = 'http://localhost:3000/beers/'
-        //use class to  create a promise using the promise constructor
     return new Promise((resolve, ) => {
         let url = beer == null ? baseURL : `${baseURL + beer}`
         fetch(url)
