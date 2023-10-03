@@ -73,9 +73,6 @@ function updateBeer(beer) {
 
 };
 
-// extra practice could include A POST method to create Beer name, description, image Url and its reviews
-
-
 // function to fetch data from a server using fetch API and return a promise object
 function fetchData(beer = null) {
     let baseURL = 'http://localhost:3000/beers/'
